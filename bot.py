@@ -44,7 +44,7 @@ async def start(client: pr0fess0r_99, message: Message):
     approvedbot = await client.get_me() 
     button = [[ InlineKeyboardButton("🤖 ʙᴏᴛ ʟɪꜱᴛ", url="https://t.me/Rapid_Bots"), InlineKeyboardButton("📢 ᴜᴘᴅᴀᴛᴇꜱ", url="https://t.me/Rapid_Bots") ],
               [ InlineKeyboardButton("🤔 ʜᴏᴡ ᴛᴏ ᴜꜱᴇ ᴍᴇ 🤭", url="https://t.me/Rapid_Bots") ]]
-    await client.send_message(chat_id=message.chat.id, text=f"**__Hello {message.from_user.mention}, I am a simple Telegram Auto Request Accept Bot. [Add Me](http://t.me/Rapid_Auto_Approve_bot) As administrator, with 𝗮𝗱𝗱 𝘂𝘀𝗲𝗿𝘀 Permission In Your Group/Channel, Where I Need To Approve Subscribers. Then Forward Me A Message From That Channel/Group. After That, Bot Start The Work 👍**__", reply_markup=InlineKeyboardMarkup(button), disable_web_page_preview=True)
+    await client.send_message(chat_id=message.chat.id, text=f"**Hello {message.from_user.mention}, I am a simple Telegram Auto Request Accept Bot. [Add Me](http://t.me/Rapid_Auto_Approve_bot) As administrator, with 𝗮𝗱𝗱 𝘂𝘀𝗲𝗿𝘀 Permission In Your Group/Channel, Where I Need To Approve Subscribers. Then Forward Me A Message From That Channel/Group. After That, Bot Start The Work 👍**", reply_markup=InlineKeyboardMarkup(button), disable_web_page_preview=True)
 
 @pr0fess0r_99.on_chat_join_request((filters.group | filters.channel) & filters.chat(CHAT_ID) if CHAT_ID else (filters.group | filters.channel))
 async def autoapprove(client: pr0fess0r_99, message: ChatJoinRequest):
